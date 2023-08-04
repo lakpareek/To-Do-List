@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #ff6e6c;
+}
+
+.lboxshad {
+    box-shadow: -8px 8px black;
+}
+
+.rboxshad {
+    box-shadow: 8px 8px black; 
+}
+
+.dbtn:hover{
+    box-shadow: 4px 4px black;
+    position: relative;
+    left: 4px;
+}
+
+.bish:hover{
+    font-size: 20px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+  }
+
+
+  label {
+    color: black;
+  }
+  
+  #todo {
+    accent-color: #777
+  }
+  
+  #todo:checked+label {
+    color: #777;
+    text-decoration: line-through;
+    &::before,
+    &::after {
+      -webkit-clip-path: inset(100%);
+      clip-path: inset(100%);
+      clip: rect 1px, 1px, 1px, 1px;
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+    &::before {
+      content: "[start of stricken text]";
+    }
+    &::after {
+      content: "[end of stricken text]";
+    }
+  }
